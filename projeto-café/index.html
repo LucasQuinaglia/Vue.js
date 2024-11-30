@@ -14,12 +14,8 @@
         <nav>
           <ul>
             <li><a href="#" @click.prevent="currentPage = 'home'">Home</a></li>
-            <li>
-              <a href="#" @click.prevent="currentPage = 'about'">Sobre</a>
-            </li>
-            <li>
-              <a href="#" @click.prevent="currentPage = 'contact'">Contato</a>
-            </li>
+            <li><a href="#" @click.prevent="currentPage = 'about'">Sobre</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'contact'">Contato</a></li>
           </ul>
         </nav>
       </header>
@@ -27,7 +23,7 @@
       <!-- Conteúdo Dinâmico -->
       <component :is="currentComponent"></component>
     </div>
-
+    <script src="./components/contact_page/ContactPage.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
