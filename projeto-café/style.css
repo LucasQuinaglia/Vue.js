@@ -82,21 +82,69 @@ h3 {
   font-weight: bold;
 }
 
+
+/* style.css */
+.sobre {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
 .titulo {
   text-align: center;
+  font-size: 2.5em;
+  color: #6f4f37; /* Cor de café */
+  margin-bottom: 20px;
 }
 
-.sobre{
-  text-align: center;
-  padding: 20px;
+h2 {
+  color: #6f4f37;
+  font-size: 2em;
+  margin-top: 30px;
 }
 
-#lista-sobre{
-  list-style: none;
-  padding: 0;
+ul#lista-sobre {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.cafe-image{
-  width: 600px;
+ul#lista-sobre li {
+  font-size: 1.2em;
+  margin: 10px 0;
+  padding: 5px;
+  background-color: #fff;
   border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #555;
+}
+
+ul#lista-sobre li:hover {
+  background-color: #f1e0d6; /* Cor suave de destaque */
+}
+
+.cafe-image {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.2em;
+  margin: 15px 0;
+  color: #555;
+  text-align: justify;
+}
+
+
+.favicon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
