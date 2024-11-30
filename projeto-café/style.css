@@ -1,86 +1,87 @@
 /* style.css */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #6f4f37; /* Cor de café */
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 20px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  component {
-    padding: 20px;
-    text-align: center;
-    color: #333;
-  }
-  
-  h1 {
-    font-size: 2em;
-  }
-  
-  h2 {
-    color: #6f4f37;
-  }
-  
-  /* Menu Grid - 4x2 Layout */
-  .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
-    grid-gap: 20px;
-    padding: 20px;
-  }
-  
-  .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 15px;
-  }
-  
-  .coffee-image {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  h3 {
-    font-size: 1.5em;
-    margin: 10px 0;
-  }
-  
-  .price {
-    color: #6f4f37;
-    font-weight: bold;
-  }
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
 
-  .titulo{
-    text-align: center;
-  }
-  
+header {
+  background-color: #6f4f37;
+  /* Cor de café */
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+component {
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  color: #6f4f37;
+}
+
+/* Menu Grid - 4x2 Layout */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 colunas */
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+}
+
+.coffee-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.price {
+  color: #6f4f37;
+  font-weight: bold;
+}
+
+.titulo {
+  text-align: center;
+}

@@ -1,6 +1,6 @@
 // app.js
 const HomePage = {
-    template: `
+  template: `
       <div>
         <h1 class='titulo'>Bem-vindo à Café & Cia!</h1>
         <p class='titulo'>O melhor lugar para saborear um café de qualidade!</p>
@@ -16,34 +16,37 @@ const HomePage = {
         </div>
       </div>
     `,
-    data() {
-      return {
-        coffees: [
-          { id: 1, name: 'Café Espresso', description: 'Café forte e encorpado, perfeito para quem ama intensidade.', price: '8.00', image: 'https://via.placeholder.com/150' },
-          { id: 2, name: 'Café Latte', description: 'Café com leite cremoso, ideal para uma pausa relaxante.', price: '12.00', image: 'https://via.placeholder.com/150' },
-          { id: 3, name: 'Café Mocha', description: 'Mistura de café com chocolate quente, para os amantes de chocolate.', price: '15.00', image: 'https://via.placeholder.com/150' },
-          { id: 4, name: 'Café Americano', description: 'Café suave e leve, ótimo para o dia a dia.', price: '7.00', image: 'https://via.placeholder.com/150' },
-          { id: 5, name: 'Café Capuccino', description: 'Mistura de café, leite vaporizado e espuma cremosa.', price: '14.00', image: 'https://via.placeholder.com/150' },
-          { id: 6, name: 'Café Gelado', description: 'Café servido gelado com gelo e leite, perfeito para o verão.', price: '10.00', image: 'https://via.placeholder.com/150' },
-          { id: 7, name: 'Café Caramel', description: 'Café com um toque de caramelo doce, para um sabor único.', price: '13.00', image: 'https://via.placeholder.com/150' },
-          { id: 8, name: 'Café Filtrada', description: 'Café filtrado, leve e suave, perfeito para degustação pura.', price: '9.00', image: 'https://via.placeholder.com/150' }
-        ]
-      };
-    }
-  };
-  
-  const AboutPage = {
-    template: `
+  data() {
+    return {
+      coffees: [
+        { id: 1, name: 'Café Espresso', description: 'Café forte e encorpado, perfeito para quem ama intensidade.', price: '8.00', image: 'https://via.placeholder.com/150' },
+        { id: 2, name: 'Café Latte', description: 'Café com leite cremoso, ideal para uma pausa relaxante.', price: '12.00', image: 'https://via.placeholder.com/150' },
+        { id: 3, name: 'Café Mocha', description: 'Mistura de café com chocolate quente, para os amantes de chocolate.', price: '15.00', image: 'https://via.placeholder.com/150' },
+        { id: 4, name: 'Café Americano', description: 'Café suave e leve, ótimo para o dia a dia.', price: '7.00', image: 'https://via.placeholder.com/150' },
+        { id: 5, name: 'Café Capuccino', description: 'Mistura de café, leite vaporizado e espuma cremosa.', price: '14.00', image: 'https://via.placeholder.com/150' },
+        { id: 6, name: 'Café Gelado', description: 'Café servido gelado com gelo e leite, perfeito para o verão.', price: '10.00', image: 'https://via.placeholder.com/150' },
+        { id: 7, name: 'Café Caramel', description: 'Café com um toque de caramelo doce, para um sabor único.', price: '13.00', image: 'https://via.placeholder.com/150' },
+        { id: 8, name: 'Café Filtrada', description: 'Café filtrado, leve e suave, perfeito para degustação pura.', price: '9.00', image: 'https://via.placeholder.com/150' }
+      ]
+    };
+  }
+};
+
+const AboutPage = {
+  template: `
       <div>
         <h1 class='titulo'>Sobre a Café & Cia</h1>
         <p>A Café & Cia é uma cafeteria fictícia que oferece uma experiência única para os amantes de café.</p>
         <p>Fundada em 2024, nossa missão é trazer cafés especiais de várias partes do mundo, preparados com o maior cuidado.</p>
+
+
+
       </div>
     `
-  };
-  
-  const ContactPage = {
-    template: `
+};
+
+const ContactPage = {
+  template: `
       <div>
         <h1 class='titulo'>Contato</h1>
         <p class='titulo'>Tem alguma dúvida ou deseja fazer uma encomenda? Entre em contato conosco!</p>
@@ -51,27 +54,26 @@ const HomePage = {
         <p>Email: contato@cafeecia.com.br</p>
       </div>
     `
-  };
-  
-  const app = Vue.createApp({
-    data() {
-      return {
-        currentPage: 'home'
-      };
-    },
-    computed: {
-      currentComponent() {
-        switch (this.currentPage) {
-          case 'about':
-            return AboutPage;
-          case 'contact':
-            return ContactPage;
-          default:
-            return HomePage;
-        }
+};
+
+const app = Vue.createApp({
+  data() {
+    return {
+      currentPage: 'home'
+    };
+  },
+  computed: {
+    currentComponent() {
+      switch (this.currentPage) {
+        case 'about':
+          return AboutPage;
+        case 'contact':
+          return ContactPage;
+        default:
+          return HomePage;
       }
     }
-  });
-  
-  app.mount('#app');
-  
+  }
+});
+
+app.mount('#app');
