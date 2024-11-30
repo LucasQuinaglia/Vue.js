@@ -1,6 +1,5 @@
-// app.js
 const HomePage = {
-    template: `
+  template: `
       <div>
         <h1 class='titulo'>Bem-vindo à Cu Coffee House!</h1>
         <p class='titulo'>O melhor lugar para saborear um café de qualidade!</p>
@@ -15,6 +14,7 @@ const HomePage = {
         </div>
       </div>
     `,
+
     data() {
       return {
         coffees: [
@@ -38,47 +38,25 @@ const HomePage = {
       };
     }
   };
-  
-  const AboutPage = {
-    template: `
-      <div>
-        <h1 class='titulo'>Sobre a Café & Cia</h1>
-        <p>A Café & Cia é uma cafeteria fictícia que oferece uma experiência única para os amantes de café.</p>
-        <p>Fundada em 2024, nossa missão é trazer cafés especiais de várias partes do mundo, preparados com o maior cuidado.</p>
-      </div>
-    `
-  };
-  
-  const ContactPage = {
-    template: `
-      <div>
-        <h1 class='titulo'>Contato</h1>
-        <p class='titulo'>Tem alguma dúvida ou deseja fazer uma encomenda? Entre em contato conosco!</p>
-        <p>Telefone: (11) 1234-5678</p>
-        <p>Email: contato@cafeecia.com.br</p>
-      </div>
-    `
-  };
-  
-  const app = Vue.createApp({
-    data() {
-      return {
-        currentPage: 'home'
-      };
-    },
-    computed: {
-      currentComponent() {
-        switch (this.currentPage) {
-          case 'about':
-            return AboutPage;
-          case 'contact':
-            return ContactPage;
-          default:
-            return HomePage;
-        }
+
+const app = Vue.createApp({
+  data() {
+    return {
+      currentPage: 'home'
+    };
+  },
+  computed: {
+    currentComponent() {
+      switch (this.currentPage) {
+        case 'about':
+          return AboutPage;
+        case 'contact':
+          return ContactPage;
+        default:
+          return HomePage;
       }
     }
-  });
-  
-  app.mount('#app');
-  
+  }
+});
+
+app.mount('#app');

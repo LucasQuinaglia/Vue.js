@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPA Vue.js</title>
-  <script src="https://unpkg.com/vue@3"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div id="app">
-    <!-- Cabeçalho -->
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#" @click.prevent="currentPage = 'home'">Home</a></li>
-          <li><a href="#" @click.prevent="currentPage = 'about'">Sobre</a></li>
-          <li><a href="#" @click.prevent="currentPage = 'contact'">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link class="favicon" rel="icon" href="./imagens/favicon.png" type="image/x-icon">
+    <title>Cu Coffe House</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Cabeçalho -->
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#" @click.prevent="currentPage = 'home'">Home</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'about'">Sobre</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'contact'">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <!-- Conteúdo Dinâmico -->
-    <component :is="currentComponent"></component>
-  </div>
+      <!-- Conteúdo Dinâmico -->
+      <component :is="currentComponent"></component>
 
-  <script src="app.js"></script>
-</body>
+      <footer class="footer">
+        <p>&copy; 2024 Cu Coffee House - Todos os direitos reservados.</p>
+      </footer>
+
+    </div>
+    <script src="./components/About_page/AboutPage.js"></script>
+    <script src="./components/contact_page/ContactPage.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
