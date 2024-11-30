@@ -2,31 +2,42 @@
 const HomePage = {
     template: `
       <div>
-        <h1>Bem-vindo à HomePage!</h1>
-        <p>Este é o conteúdo principal do nosso site.</p>
-        <h2>O que é um SPA?</h2>
-        <p>
-          Um SPA (Single Page Application) é um tipo de aplicação web onde toda a navegação é feita dentro de uma única página. 
-          Isso significa que, ao clicar em um link, a página não será recarregada. Em vez disso, o conteúdo é carregado dinamicamente, 
-          proporcionando uma experiência mais rápida e fluida para o usuário.
-        </p>
+        <h1>Bem-vindo à Café & Cia!</h1>
+        <p>O melhor lugar para saborear um café de qualidade!</p>
+        
+        <h2>Nosso Menu de Cafés</h2>
+        <div class="menu-grid">
+          <div class="card" v-for="coffee in coffees" :key="coffee.id">
+            <img :src="coffee.image" alt="Imagem do café" class="coffee-image">
+            <h3>{{ coffee.name }}</h3>
+            <p>{{ coffee.description }}</p>
+            <p class="price">R$ {{ coffee.price }}</p>
+          </div>
+        </div>
       </div>
-    `
+    `,
+    data() {
+      return {
+        coffees: [
+          { id: 1, name: 'Café Espresso', description: 'Café forte e encorpado, perfeito para quem ama intensidade.', price: '8.00', image: 'https://via.placeholder.com/150' },
+          { id: 2, name: 'Café Latte', description: 'Café com leite cremoso, ideal para uma pausa relaxante.', price: '12.00', image: 'https://via.placeholder.com/150' },
+          { id: 3, name: 'Café Mocha', description: 'Mistura de café com chocolate quente, para os amantes de chocolate.', price: '15.00', image: 'https://via.placeholder.com/150' },
+          { id: 4, name: 'Café Americano', description: 'Café suave e leve, ótimo para o dia a dia.', price: '7.00', image: 'https://via.placeholder.com/150' },
+          { id: 5, name: 'Café Capuccino', description: 'Mistura de café, leite vaporizado e espuma cremosa.', price: '14.00', image: 'https://via.placeholder.com/150' },
+          { id: 6, name: 'Café Gelado', description: 'Café servido gelado com gelo e leite, perfeito para o verão.', price: '10.00', image: 'https://via.placeholder.com/150' },
+          { id: 7, name: 'Café Caramel', description: 'Café com um toque de caramelo doce, para um sabor único.', price: '13.00', image: 'https://via.placeholder.com/150' },
+          { id: 8, name: 'Café Filtrada', description: 'Café filtrado, leve e suave, perfeito para degustação pura.', price: '9.00', image: 'https://via.placeholder.com/150' }
+        ]
+      };
+    }
   };
   
   const AboutPage = {
     template: `
       <div>
-        <h1>Sobre Nós</h1>
-        <p>Somos uma empresa fictícia dedicada a entregar os melhores serviços!</p>
-        <h2>Como funciona um SPA?</h2>
-        <p>
-          Diferente de sites tradicionais, onde cada clique geralmente carrega uma nova página do servidor, um SPA utiliza JavaScript 
-          para carregar e atualizar o conteúdo de forma dinâmica, sem a necessidade de recarregar a página inteira.
-        </p>
-        <p>
-          Isso resulta em uma navegação mais rápida, pois apenas as partes da página que mudam são recarregadas, e não toda a página.
-        </p>
+        <h1>Sobre a Café & Cia</h1>
+        <p>A Café & Cia é uma cafeteria fictícia que oferece uma experiência única para os amantes de café.</p>
+        <p>Fundada em 2024, nossa missão é trazer cafés especiais de várias partes do mundo, preparados com o maior cuidado.</p>
       </div>
     `
   };
@@ -35,16 +46,9 @@ const HomePage = {
     template: `
       <div>
         <h1>Contato</h1>
-        <p>Entre em contato conosco pelo e-mail: contato@empresa.com</p>
-        <h2>Vantagens de um SPA</h2>
-        <p>
-          As SPAs oferecem uma experiência de usuário mais rápida e interativa, já que a navegação entre as páginas é feita 
-          de maneira instantânea, sem a necessidade de recarregar a página.
-        </p>
-        <p>
-          Além disso, SPAs tendem a ser mais eficientes em termos de recursos, pois evitam múltiplas requisições ao servidor 
-          para cada mudança de página.
-        </p>
+        <p>Tem alguma dúvida ou deseja fazer uma encomenda? Entre em contato conosco!</p>
+        <p>Telefone: (11) 1234-5678</p>
+        <p>Email: contato@cafeecia.com.br</p>
       </div>
     `
   };
