@@ -1,86 +1,143 @@
-/* style.css */
+/* Geral */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #6f4f37; /* Cor de café */
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #6f4f37;
+  /* Cor de café */
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navegação */
+nav ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #523b2a;
+  /* Tom mais escuro do café */
+  text-decoration: none;
+}
+
+/* Conteúdo */
+.component {
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+
+h2 {
+  color: #6f4f37;
+  margin-top: 20px;
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Responsivo */
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.coffee-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.price {
+  color: #6f4f37;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.titulo {
+  text-align: center;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
   nav ul li {
-    margin: 0 20px;
+    margin: 0 10px;
   }
-  
+
   nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 8px 10px;
   }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  component {
-    padding: 20px;
-    text-align: center;
-    color: #333;
-  }
-  
+
   h1 {
     font-size: 2em;
   }
-  
+
   h2 {
-    color: #6f4f37;
-  }
-  
-  /* Menu Grid - 4x2 Layout */
-  .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
-    grid-gap: 20px;
-    padding: 20px;
-  }
-  
-  .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 15px;
-  }
-  
-  .coffee-image {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  h3 {
     font-size: 1.5em;
-    margin: 10px 0;
   }
-  
-  .price {
-    color: #6f4f37;
-    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .titulo{
-    text-align: center;
+  nav ul li {
+    margin: 10px 0;
   }
-  
+}
