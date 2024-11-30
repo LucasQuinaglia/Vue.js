@@ -1,4 +1,3 @@
-// app.js
 const HomePage = {
   template: `
       <div>
@@ -56,17 +55,6 @@ const AboutPage = {
         <p>Visite-nos e descubra o melhor café da região!</p>
         <img src="./imagens/cu coffe house.png" alt="Cafeteria Café & Cia" class="cafe-image">
 
-      </div>
-    `
-};
-
-const ContactPage = {
-  template: `
-      <div>
-        <h1 class='titulo'>Contato</h1>
-        <p class='titulo'>Tem alguma dúvida ou deseja fazer uma encomenda? Entre em contato conosco!</p>
-        <p>Telefone: (11) 1234-5678</p>
-        <p>Email: contato@cafeecia.com.br</p>
       </div>
     `
 };
