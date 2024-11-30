@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPA Vue.js</title>
+  <script src="https://unpkg.com/vue@3"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Cabeçalho -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#" @click.prevent="currentPage = 'home'">Home</a></li>
+          <li><a href="#" @click.prevent="currentPage = 'about'">Sobre</a></li>
+          <li><a href="#" @click.prevent="currentPage = 'contact'">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Conteúdo Dinâmico -->
+    <component :is="currentComponent"></component>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
