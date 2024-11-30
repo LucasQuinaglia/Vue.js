@@ -2,8 +2,8 @@
 const HomePage = {
     template: `
       <div>
-        <h1>Bem-vindo à Café & Cia!</h1>
-        <p>O melhor lugar para saborear um café de qualidade!</p>
+        <h1 class='titulo'>Bem-vindo à Café & Cia!</h1>
+        <p class='titulo'>O melhor lugar para saborear um café de qualidade!</p>
         
         <h2>Nosso Menu de Cafés</h2>
         <div class="menu-grid">
@@ -35,7 +35,7 @@ const HomePage = {
   const AboutPage = {
     template: `
       <div>
-        <h1>Sobre a Café & Cia</h1>
+        <h1 class='titulo'>Sobre a Café & Cia</h1>
         <p>A Café & Cia é uma cafeteria fictícia que oferece uma experiência única para os amantes de café.</p>
         <p>Fundada em 2024, nossa missão é trazer cafés especiais de várias partes do mundo, preparados com o maior cuidado.</p>
       </div>
@@ -45,8 +45,8 @@ const HomePage = {
   const ContactPage = {
     template: `
       <div>
-        <h1>Contato</h1>
-        <p>Tem alguma dúvida ou deseja fazer uma encomenda? Entre em contato conosco!</p>
+        <h1 class='titulo'>Contato</h1>
+        <p class='titulo'>Tem alguma dúvida ou deseja fazer uma encomenda? Entre em contato conosco!</p>
         <p>Telefone: (11) 1234-5678</p>
         <p>Email: contato@cafeecia.com.br</p>
       </div>
