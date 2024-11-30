@@ -35,8 +35,8 @@ const HomePage = {
 const AboutPage = {
   template: `
       <div class='sobre'>
-        <h1 class='titulo'>Sobre a Café & Cia</h1>
-        <p>A Café & Cia é uma cafeteria fictícia que oferece uma experiência única para os amantes de café.</p>
+        <h1 class='titulo'>Sobre a Cu Coffe House</h1>
+        <p>A Cu Coffe House é uma cafeteria fictícia que oferece uma experiência única para os amantes de café.</p>
         <p>Fundada em 2024, nossa missão é trazer cafés especiais de várias partes do mundo, preparados com o maior cuidado.</p>
 
         <h2>Nossos Valores</h2>
@@ -58,9 +58,9 @@ const AboutPage = {
         <!-- Rodapé com logo -->
         <footer class="footer">
           <div class="logo-footer">
-            <img src="./imagens/cu coffe house.png" alt="Logo Café & Cia" class="logo">
+            <img src="./imagens/cu coffe house.png" alt="Logo Cu Coffe House" class="logo">
           </div>
-          <p>&copy; 2024 Café & Cia - Todos os direitos reservados.</p>
+          <p>&copy; 2024 Cu Coffe House - Todos os direitos reservados.</p>
         </footer>
       </div>
     `

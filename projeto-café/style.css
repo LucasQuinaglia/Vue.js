@@ -89,15 +89,15 @@ h3 {
   color: white;
   text-align: center;
   padding: 20px;
-  position: relative;
   bottom: 0;
-  width: 100%;
   margin-top: 50px; /* Espaço antes do rodapé */
 }
 
 .footer .logo {
   max-width: 150px; /* Logo não ultrapassa 150px de largura */
   height: auto;
+  border-radius: 65px;
+  align-content: left !important;
 }
 
 .footer p {
@@ -111,7 +111,6 @@ h3 {
   font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
   margin: 0;
-  padding: 20px;
   color: #333;
 }
 
@@ -152,7 +151,6 @@ ul#lista-sobre li:hover {
   width: 100%;
   max-width: 600px;
   margin: 30px auto;
-  display: block;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
