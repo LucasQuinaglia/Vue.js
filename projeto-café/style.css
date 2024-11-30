@@ -85,3 +85,18 @@ h3 {
 .titulo {
   text-align: center;
 }
+
+.sobre{
+  text-align: center;
+  padding: 20px;
+}
+
+#lista-sobre{
+  list-style: none;
+  padding: 0;
+}
+
+.cafe-image{
+  width: 600px;
+  border-radius: 8px;
+}
